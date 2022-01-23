@@ -1,17 +1,17 @@
 package com.yangz.bloblog.dao;
 
 import com.yangz.bloblog.entity.BlogConfig;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
+import java.util.List;
+
+@Mapper
 public interface BlogConfigMapper {
-    int deleteByPrimaryKey(String configName);
-
-    int insert(BlogConfig record);
-
-    int insertSelective(BlogConfig record);
+    List<BlogConfig> selectAll();
 
     BlogConfig selectByPrimaryKey(String configName);
 
     int updateByPrimaryKeySelective(BlogConfig record);
 
-    int updateByPrimaryKey(BlogConfig record);
 }

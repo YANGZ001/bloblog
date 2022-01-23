@@ -1,5 +1,6 @@
 package com.yangz.bloblog.interceptor;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -9,15 +10,16 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @Package com.yangz.bloblog.interceptor
  * @Author Zhang Yang
- * @Date 12/1/22 5:47 PM
  * @Version V1.0
  */
+@Component
 public class AdminLoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
+        //Use interceptor to handle user authentication.
         String requestServletPath = request.getServletPath();
         if (requestServletPath.startsWith("/admin") && null == request.getSession().getAttribute("loginUser")) {
-            request.getSession().setAttribute("errorMsg", "请重新登陆");
+            request.getSession().setAttribute("errorMsg", "Please login again");
             response.sendRedirect(request.getContextPath() + "/admin/login");
             return false;
         } else {

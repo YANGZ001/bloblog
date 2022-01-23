@@ -1,7 +1,13 @@
 package com.yangz.bloblog.dao;
 
 import com.yangz.bloblog.entity.BlogCategory;
+import com.yangz.bloblog.util.PageQueryUtil;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
+@Mapper
 public interface BlogCategoryMapper {
     int deleteByPrimaryKey(Integer categoryId);
 
@@ -11,7 +17,17 @@ public interface BlogCategoryMapper {
 
     BlogCategory selectByPrimaryKey(Integer categoryId);
 
+    BlogCategory selectByCategoryName(String categoryName);
+
     int updateByPrimaryKeySelective(BlogCategory record);
 
     int updateByPrimaryKey(BlogCategory record);
+
+    List<BlogCategory> findCategoryList(PageQueryUtil pageUtil);
+
+    List<BlogCategory> selectByCategoryIds(@Param("categoryIds") List<Integer> categoryIds);
+
+    int getTotalCategories(PageQueryUtil pageUtil);
+
+    int deleteBatch(Integer[] ids);
 }

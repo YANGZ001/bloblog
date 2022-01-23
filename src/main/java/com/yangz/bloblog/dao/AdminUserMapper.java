@@ -1,9 +1,10 @@
 package com.yangz.bloblog.dao;
 
 import com.yangz.bloblog.entity.AdminUser;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
 
+@Mapper
 public interface AdminUserMapper {
     int insert(AdminUser record);
 

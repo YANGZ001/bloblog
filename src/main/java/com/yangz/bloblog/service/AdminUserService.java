@@ -13,6 +13,7 @@ public interface AdminUserService {
 
     /**
      * 获取用户信息
+     * Get user information
      *
      * @param loginUserId
      * @return
@@ -21,6 +22,7 @@ public interface AdminUserService {
 
     /**
      * 修改当前登录用户的密码
+     * update password of current user
      *
      * @param loginUserId
      * @param originalPassword
@@ -31,6 +33,7 @@ public interface AdminUserService {
 
     /**
      * 修改当前登录用户的名称信息
+     * Update name of current user
      *
      * @param loginUserId
      * @param loginUserName
