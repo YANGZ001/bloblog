@@ -204,7 +204,7 @@ insert  into `tb_config`(`config_name`,`config_value`,`create_time`,`update_time
 insert  into `tb_config`(`config_name`,`config_value`,`create_time`,`update_time`) values ('footerPoweredByURL','https://github.com/YANGZ001','2021-01-01 15:31:20','2021-01-23 15:31:20');
 insert  into `tb_config`(`config_name`,`config_value`,`create_time`,`update_time`) values ('websiteDescription','Bloblog is a simple & beautiful blogging system implemented with Spring-Boot & Thymeleaf & MyBatis','2021-01-01 15:31:20','2021-01-23 15:31:20');
 insert  into `tb_config`(`config_name`,`config_value`,`create_time`,`update_time`) values ('websiteIcon','/admin/dist/img/favicon.png','2021-01-01 15:31:20','2021-01-23 15:31:20');
-insert  into `tb_config`(`config_name`,`config_value`,`create_time`,`update_time`) values ('websiteLogo','/admin/dist/img/logo2.png','2021-01-01 15:31:20','2021-01-23 15:31:20');
+insert  into `tb_config`(`config_name`,`config_value`,`create_time`,`update_time`) values ('websiteLogo','/admin/dist/img/favicon.png','2021-01-01 15:31:20','2021-01-23 15:31:20');
 insert  into `tb_config`(`config_name`,`config_value`,`create_time`,`update_time`) values ('websiteName','personal blog','2021-01-01 15:31:20','2021-01-23 15:31:20');
 insert  into `tb_config`(`config_name`,`config_value`,`create_time`,`update_time`) values ('yourAvatar','/admin/dist/img/13.png','2021-01-01 15:31:20','2021-01-23 15:31:20');
 insert  into `tb_config`(`config_name`,`config_value`,`create_time`,`update_time`) values ('yourEmail','e0787809@u.nus.edu','2021-01-01 15:31:20','2021-01-23 15:31:20');
